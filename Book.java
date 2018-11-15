@@ -1,6 +1,8 @@
 /* ************************************************************************* *\
 *                Programmierung 1 HS 2018 - Serie 3-2                         * 
 \* ************************************************************************* */
+package book;
+
 import java.util.Date;
 import java.util.Scanner;
 import java.text.*;
