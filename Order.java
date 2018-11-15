@@ -1,12 +1,6 @@
-/**
- * Write a description of class Order here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
 import java.util.*;
 import java.text.*;
-import Book.Book;
+import Book.book;
 
 public class Order
 {
@@ -21,9 +15,11 @@ public class Order
      * Constructor for objects of class Order
      */
     public Order(){
-        
-        // initialise instance variables
         orderId++;
+        System.out.println ("Order id: " +orderId +", Customer: " +customerName +", " +customerAddress);
+        System.out.println (b);
+        System.out.println ("Total price: " + toString () );
+        
     }
 
     /**
@@ -54,16 +50,19 @@ public class Order
         this.customerAddress = a;
     }
     
-    //unsure what toString does
-    public String toString (Book book){
-         return book.toString();   
-    }
-    
     public int getTotalPrice(){
         this.totalPrice = 0;
         for (int i = 0; i < this.books.size(); i++)
         {
+            
             this.totalPrice += this.books.get(i).price;
         }    
     }
+    
+    //adds currency to totalPrice
+    public String toString (){
+        NumberFormat cur =  NumberFormat.getCurrencyInstance();
+        return (cur.format(totalPrice));   
+    }
+ 
 }
