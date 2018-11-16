@@ -1,6 +1,10 @@
+ 
+/* ************************************************************************* *\
+*                Programmierung 1 HS 2018 - Serie 3-2                         * 
+\* ************************************************************************* */
+ 
 import java.util.*;
 import java.text.*;
-import book.Book;
 
 public class Order
 {
@@ -16,8 +20,9 @@ public class Order
      */
     public Order(){
         orderId++;
+        
         System.out.println ("Order id: " +orderId +", Customer: " +customerName +", " +customerAddress);
-        System.out.println (b);
+        System.out.println (books);
         System.out.println ("Total price: " + toString () );
         
     }
@@ -29,9 +34,45 @@ public class Order
      * @return    the sum of x and y
      */
     public ArrayList<Book> books = new ArrayList<Book>();
+
+    //public int Book.getId()
+    //    {return id;}
+    
     
     public void addBook(Book b){
-        if (this.books.size() >= 5)
+        Book b1, b2, b3, b4, b5; //switch 
+        Book [] books = new Book [5];
+        
+        book.getId();
+        
+        
+        switch(id){
+        case 1:
+        books.add(b1);
+        break;
+        
+        case 2:
+        books.add(b2);
+        break;
+        
+        case 3:
+        books.add(b3);
+        break;
+        
+        case 4:
+        books.add(b4);
+        break;
+        
+        case 5:
+        books.add (b5);
+        break;
+        
+        default:
+        break;
+        
+        }
+    
+        /* if (this.books.size() >= 5)
         {
             System.out.println("Too many books, read the ones you have first.");
             return;
@@ -39,7 +80,7 @@ public class Order
         else
         {   
             this.books.append(b);
-        }
+        }*/
     }
     
     public void setCustomerName (String s){
@@ -52,6 +93,7 @@ public class Order
     
     public int getTotalPrice(){
         this.totalPrice = 0;
+        book.getPrice();
         for (int i = 0; i < this.books.size(); i++)
         {
             
